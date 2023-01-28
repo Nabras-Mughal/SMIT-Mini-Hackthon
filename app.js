@@ -39,7 +39,7 @@ file.addEventListener("click",function(){
 upload.addEventListener('click',()=>{
 
   var storageRef = firebase.storage().ref();
-console.log(files[0].name)
+// console.log(files[0].name)
   var uploadTask = storageRef.child(`images/${files[0].name}`)
   .put(files[0])
 
@@ -90,7 +90,7 @@ console.log('ok')
 login.addEventListener('click',function(){
     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
   .then(async(user) => {
-
+console.log(role.value)
     localStorage.setItem('uid',user.user.uid)
 if(role.value=='user'){
   obj={
@@ -121,6 +121,7 @@ if(role.value=='user'){
   })
   .catch((error) => {
 // console.log(error.message)
+console.log('error')
   });
 })
 
