@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <!-- <form class="m-5"> -->
-    <!-- <div class="form-group">
+        <!-- <div class="form-group">
             <label for="exampleInputEmail1">name</label>
             <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -32,45 +27,49 @@
         <div class="form-group form-check">
           
         </div> -->
-    <div class="m-5">
-      <input type="text" placeholder="name" id="name" /><br />
-      <input type="email" placeholder="email" id="email" /><br />
-      <input type="password" placeholder="password" id="password" /><br />
-      <select name="" class="my-3" id="role">
-        <option value="" selected disabled>select role</option>
-        <option value="user">user</option>
-        <option value="admin">admin</option>
-      </select>
+<div class="m-5">
+    <input type="text" placeholder="name" id="name"><br>
+<input type="email" placeholder="email" id="email"><br>
+<input type="password" placeholder="password" id="password"><br>
+<input type="file" placeholder="password" id="file"><br>
+<button id="btn">upload</button> <b id="progress"></b>
+<select name="" class="my-3" id="role">
+    <option value="" selected disabled> select role</option>
+    <option value="user">user</option>
+    <option value="admin">admin</option>
+  </select>
 
-      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-      <button type="submit" id="login" class="btn btn-primary">login</button>
-    </div>
-    <!-- </form> -->
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="login" class="btn btn-primary">login</button>
+</div>
+      <!-- </form> -->
 
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-    <script type="">
-      // Import the functions you need from the SDKs you need
-      // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+      <script type="">
+        // Import the functions you need from the SDKs you need
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCG5lPvNAK1A5R_CI_33BY_5Gq4R_Q0dyc",
+          authDomain: "signup-24e44.firebaseapp.com",
+          databaseURL: "https://signup-24e44-default-rtdb.firebaseio.com",
+          projectId: "signup-24e44",
+          storageBucket: "signup-24e44.appspot.com",
+          messagingSenderId: "533670450036",
+          appId: "1:533670450036:web:94e6af85c30806c0ae5221"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
 
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyCG5lPvNAK1A5R_CI_33BY_5Gq4R_Q0dyc",
-        authDomain: "signup-24e44.firebaseapp.com",
-        databaseURL: "https://signup-24e44-default-rtdb.firebaseio.com",
-        projectId: "signup-24e44",
-        storageBucket: "signup-24e44.appspot.com",
-        messagingSenderId: "533670450036",
-        appId: "1:533670450036:web:94e6af85c30806c0ae5221",
-      };
+      <script src="app.js"></script>
 
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <script src="app.js"></script>
-  </body>
+</body>
 </html>

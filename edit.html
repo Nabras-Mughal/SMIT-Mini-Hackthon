@@ -5,38 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #div1{
-            /* width: 40%; */
-/* background-color: aqua; */
-display: inline-block;
-/* margin-left: 10%; */
-           align-items: center;
-            text-align: center;
-
-justify-content: center;
-justify-items: center;
-        }
-        #div2{
-            text-align: center;
-            /* background-color: aquamarine; */
-           /* align-items: center; */
-         
-        }
-    </style>
 </head>
 <body>
-    
-<div id="div2">  <div id="div1">  <h1>user page</h1>
-<!-- border-radius: 50%; -->
-    <img style="border-radius: 50%;" width="200px" height="200px" src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="" id="pic">
-    <h1>user name</h1>
-    <h1>user email</h1></div></div>
 
+
+    <div class="m-5">
+        <input type="text" placeholder="name" id="name"><br>
+    <input type="email" placeholder="email" id="email"><br>
+    <input type="password" placeholder="password" id="password"><br>
+    <input type="file" placeholder="password" id="file"><br>
+<button id="btn">upload</button> <b id="progress"></b>
+    <!-- <select name="" class="my-3" id="role">
+        <option value="" selected disabled> select role</option>
+        <option value="user">user</option>
+        <option value="admin">admin</option>
+      </select> -->
+    
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            <!-- <button type="submit" id="login" class="btn btn-primary">login</button> -->
+    </div>
+          <!-- </form> -->
+    
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
           <script type="">
             // Import the functions you need from the SDKs you need
             // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
@@ -58,6 +50,7 @@ justify-items: center;
             firebase.initializeApp(firebaseConfig);
           </script>
     
-          <script src="user.js"></script>
+          <script src="edit.js"></script>
+    
 </body>
 </html>
